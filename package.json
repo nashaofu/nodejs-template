@@ -4,6 +4,7 @@
   "description": "nodejs-template",
   "main": "dist/index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "dev": "tsc --watch",
     "build": "npm run lint && npm run clean && tsc",
     "lint": "eslint . --ext .js,.ts --fix",
@@ -23,6 +24,9 @@
     "url": "https://github.com/nashaofu/nodejs-template/issues"
   },
   "homepage": "https://github.com/nashaofu/nodejs-template#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^17.0.0",
